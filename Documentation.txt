@@ -1,0 +1,49 @@
+Favourite Teacher Selection api.
+
+*Set environment variables according to you.
+*Registration process.
+link - /api/auth/register(post request)
+for teacher body = {
+    "name": "",
+    "email": "",
+    "phone": "",
+    "password": ""    
+}
+for student body = {
+    "name": "",
+    "email": "",
+    "phone": "",
+    "password": "",
+    "isStudent": true
+}
+
+* Login process.
+link - /api/auth/login(post request)
+for student body = {
+    "email": "",
+    "password": "",
+    "isStudent": true
+}
+it will give a jwt token, set this token in header 
+of add and remove favourite teacher request as name token.
+
+* Add favourite teacher 
+link = /api/student/addFav(put request)
+NOTE: header include
+body = {
+    "email": "",
+    "favTeacher": "//name of favourite teacher"
+}
+
+* Remove favourite teacher 
+link = /api/student/removeFav(put request)
+NOTE: header include
+body = {
+    "email": "",
+    "favTeacher": "//name of favourite teacher"
+}
+
+* Most Favourite Teacher
+link - /api/student/favTeacher(get)
+
+*****COMPLETED*****
